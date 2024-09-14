@@ -1,6 +1,13 @@
 import sys
 from pprint import pprint
 
+class Pupil:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+
 def introspection_info(obj):
     attributes = []
     methods = []
@@ -18,7 +25,9 @@ def introspection_info(obj):
         'size': sys.getsizeof(obj)
     }
 
-
-number_info = introspection_info('42')
+pup1 = Pupil('Vasiliy', 15, 8)
+#number_info = introspection_info('42')
 #str_info = introspection_info('stroka')
-pprint(number_info)
+class_info = introspection_info(pup1)
+#pprint(number_info)
+pprint(class_info)
