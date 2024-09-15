@@ -21,6 +21,7 @@ def introspection_info(obj):
         'attributes': attributes,
         'methods': methods,
         'module': __name__,
+        'module_obj': obj.__class__.__module__,
         'id': id(obj),
         'size': sys.getsizeof(obj)
     }
